@@ -1,0 +1,37 @@
+# Secrets — never commit
+.env
+.env.*
+*_key.json
+service_account*.json
+credentials*.json
+secrets/
+~/keys/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Infra state
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

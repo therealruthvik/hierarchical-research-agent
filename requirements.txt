@@ -1,0 +1,8 @@
+# Verify current versions at https://pypi.org/project/google-adk/ before deploy.
+# AI SDK versions deprecate frequently — floor pins only.
+google-adk>=1.0.0
+google-cloud-discoveryengine>=0.13.0
+google-generativeai>=0.8.0
+python-dotenv>=1.0.0
+# Explicit floor to avoid protobuf version conflicts with grpcio-based GCP libs
+protobuf>=5.29.0

@@ -1,0 +1,47 @@
+# Container build ignore — separate purpose from .gcloudignore
+.git
+.gitignore
+.gcloudignore
+
+# Virtual environments — install inside container via requirements.txt instead
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local dev artifacts
+.env
+.env.*
+*.local
+
+# Secrets — injected at runtime via Secret Manager, never baked into image
+*_key.json
+service_account*.json
+credentials*.json
+secrets/
+
+# Infrastructure state
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+tests/
+*.egg-info/
+dist/
+build/
+
+# Docs and tooling
+*.md
+.vscode/
+.idea/
+Dockerfile*
+docker-compose*

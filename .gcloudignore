@@ -1,0 +1,44 @@
+# Cloud Build source upload ignore — separate from .dockerignore
+.gcloudignore
+.git
+.gitignore
+
+# Virtual environments — multi-hundred MB, will time out deploy slots
+.venv/
+venv/
+env/
+ENV/
+
+# Compiled bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Local dev artifacts
+.env
+.env.*
+*.local
+
+# Secrets and credentials — NEVER upload
+*_key.json
+service_account*.json
+credentials*.json
+secrets/
+
+# Infrastructure state
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Local test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
